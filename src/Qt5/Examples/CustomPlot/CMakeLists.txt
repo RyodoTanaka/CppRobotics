@@ -22,12 +22,12 @@ include_directories(include)
 qt5_wrap_ui(UI_WRAP ${UIS})
 qt5_wrap_cpp(MOC_SOURCES ${HEADERS})
 # build #
-add_executable(main 
+add_executable(custom_plot 
 	${SOURCES} 
 	${HEADERS}
 	${UI_WRAP} 
 	${MOC_SOURCES})
-target_link_libraries(main
+target_link_libraries(custom_plot
 	PUBLIC
 	Qt5::Core
 	Qt5::Gui 
