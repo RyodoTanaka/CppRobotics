@@ -26,6 +26,7 @@ link_directories(
 ############
 find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
+link_directories(${EIGEN3_LIBRARY_DIRS})
 
 #########
 ## Src ##
@@ -35,5 +36,14 @@ option(BUILD_QT5_EXAMPLES "Build Qt5 Examples" OFF)
 if(BUILD_QT5_EXAMPLES)
   add_subdirectory(src/Qt5/Examples)
 endif()
+add_subdirectory(src/Qt5/Plot)
+
+
+###########
+## build ##
+###########
+include_directories(src/Qt5/Plot/include)
+add_executable(main src/main.cpp)
+target_link_libraries(main CppRoboticsPlot Qt5::Core ${EIGEN3_LIBRALIES})
 
 
