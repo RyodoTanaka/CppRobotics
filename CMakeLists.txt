@@ -43,7 +43,8 @@ add_subdirectory(src/Qt5/Plot)
 ## build ##
 ###########
 include_directories(src/Qt5/Plot/include)
-add_executable(main src/main.cpp)
-target_link_libraries(main CppRoboticsPlot Qt5::Core ${EIGEN3_LIBRALIES})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+add_executable(plot_2d src/plot_2d.cpp)
+target_link_libraries(plot_2d CppRoboticsPlot Qt5::Core ${EIGEN3_LIBRALIES})
 
 
