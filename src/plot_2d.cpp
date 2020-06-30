@@ -5,7 +5,7 @@
 // Original //
 #include <plot.h>
 
-int main(int argc, char *argv[])
+int main(int argc, char** argv)
 {
   // need to initialize Qt //
   QApplication app(argc, argv);
