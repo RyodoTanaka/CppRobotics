@@ -31,4 +31,9 @@ include_directories(${EIGEN3_INCLUDE_DIR})
 ## Src ##
 #########
 ## Qt5 ##
-add_subdirectory(src/Qt5)
+option(BUILD_QT5_EXAMPLES "Build Qt5 Examples" OFF)
+if(BUILD_QT5_EXAMPLES)
+  add_subdirectory(src/Qt5/Examples)
+endif()
+
+
