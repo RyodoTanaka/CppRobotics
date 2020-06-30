@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>514</width>
-    <height>375</height>
+    <width>646</width>
+    <height>445</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CustomPlotTest</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -21,22 +21,6 @@
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>514</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuTest1">
-    <property name="title">
-     <string>Fig1</string>
-    </property>
-   </widget>
-   <addaction name="menuTest1"/>
-  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
