@@ -22,7 +22,7 @@ class Plot2D : public QMainWindow
   ~Plot2D();
 
   void plotPoint(const double& x, const double& y);
-  void plotPoint(const Eigen::Vector2d& p);
+  void plotPoint(const Eigen::Vector2d& p, const double& size=5, const QColor& color=Qt::blue);
   void clearPoint(void);
  private slots:
   void initialize(void);  
