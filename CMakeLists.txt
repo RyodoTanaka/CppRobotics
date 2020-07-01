@@ -28,23 +28,32 @@ find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
 link_directories(${EIGEN3_LIBRARY_DIRS})
 
-#########
-## Src ##
-#########
-## Qt5 ##
-option(BUILD_QT5_EXAMPLES "Build Qt5 Examples" OFF)
-if(BUILD_QT5_EXAMPLES)
-  add_subdirectory(src/Qt5/Examples)
-endif()
-add_subdirectory(src/Qt5/Plot)
+#########################
+## CppRobotics Library ##
+#########################
+set(CR_LIB_DIRS
+  Plot
+  )
+set(CR_LIBS
+  CRPlot
+  )
+foreach(lib_dir ${CR_LIB_DIRS})
+  include_directories(src/${lib_dir}/include)
+  add_subdirectory(src/${lib_dir})
+endforeach(lib_dir)
 
-
-###########
-## build ##
-###########
-include_directories(src/Qt5/Plot/include)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
-add_executable(plot_2d src/plot_2d.cpp)
-target_link_libraries(plot_2d CppRoboticsPlot Qt5::Core ${EIGEN3_LIBRALIES})
+##############
+## Examples ##
+##############
+set(CR_EXAMPLES
+  Qt5
+  Plot
+  )
+foreach(example ${CR_EXAMPLES})
+  option(BUILD_${example}_EXAMPLE "Build ${example} Example" OFF)
+  if(BUILD_${example}_EXAMPLE)
+    add_subdirectory(src/Examples/${example})
+  endif()
+endforeach(example)
 
 

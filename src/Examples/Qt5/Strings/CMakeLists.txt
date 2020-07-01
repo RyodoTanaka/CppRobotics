@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 ## set binary directory ##
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/Qt5/Examples/Strings)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/Examples/Qt5/Strings)
 
 ## basic ##
 add_executable(basic basic.cpp)
