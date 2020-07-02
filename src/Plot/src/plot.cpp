@@ -67,6 +67,7 @@ void Plot2D::clearGraph(const uint& id) {
 void Plot2D::showPlot(void) {
   plot();
   show();
+  QApplication::quit();  
 }
 
 void Plot2D::addPoint(const uint& id, const double& x, const double& y) {

@@ -5,6 +5,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/Qt5/Plot)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 # set arguments #
 set(SOURCES
+  src/main.cpp
   src/plot.cpp
   src/qcustomplot.cpp
   )
